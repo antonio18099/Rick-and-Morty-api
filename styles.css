@@ -2,15 +2,35 @@
     --dark-grey: #121212; 
     --grey: #1E1E1E;    
     --light-grey: #E0E0E0; 
-    --blue: #004D7A;    
+    --blue: #114c7d; /* Color cian claro */
     --white: #FFFFFF;     
     --yellow: #F7E05C;   
+    --green: #97CE4C; /* Verde para el borde */
+    --bg-color: #2C2A4A; /* Color de fondo oscuro basado en el portal */
+    --card-color: #6A4C93; /* Nuevo color de las cards (morado oscuro) */
+    --accent-color: #F0E14A; /* Color de acentos similar a los detalles amarillos */
+}
+
+@font-face {
+    font-family: 'Rick and Morty Font';
+    src: url('assets/get-schwifty/get_schwifty.ttf') format('truetype');
+}
+
+h1 {
+    font-family: 'Rick and Morty Font', sans-serif;
+    margin: 0;
+    color: var(--blue); 
+    text-shadow: 
+        1px 1px 0px var(--green),  
+        -1px -1px 0px var(--green), 
+        1px -1px 0px var(--green),  
+        -1px 1px 0px var(--green);  
 }
 
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: var(--dark-grey);
+    background-color: var(--bg-color);
     color: var(--light-grey);
 }
 
@@ -20,16 +40,24 @@ header {
     text-align: center;
 }
 
-header h1 {
-    margin: 0;
-    color: var(--yellow);
-}
-
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
+}
+
+.form-container {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid var(--light-grey);
+    border-radius: 5px;
+    background-color: var(--grey);
+    color: var(--light-grey);
+    width: 300px; /* Ancho fijo para el input */
 }
 
 .cards-container {
@@ -40,7 +68,7 @@ main {
 }
 
 .card {
-    background-color: var(--grey);
+    background-color: var(--card-color); /* Color de las cards actualizado */
     width: 15rem;
     height: 20rem;
     display: flex;
